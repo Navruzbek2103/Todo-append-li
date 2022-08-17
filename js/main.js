@@ -73,20 +73,24 @@ elForm.addEventListener("submit", function(event){
   event.preventDefault();
 
 
-  if(elInput.value != 0){
-    let elItem = document.createElement("li");
-    elList.appendChild(elItem)
-    elItem.textContent = elInput.value
-    elItem.style.fontSize = "28px";
-    elItem.style.maxWidth = "90%";
-    elItem.style.backgroundColor = "white";
-    elItem.style.padding = "15px 15px";
-    elItem.style.margin = "28px";
-    elItem.style.borderRadius = "10px";
-    elItem.style.boxShadow = "0 0 15px 2px cyan";
 
-    elInput.value = ""
+  function addedNewItem(){
+    if(elInput.value != 0){
+      let elItem = document.createElement("li");
+      elList.appendChild(elItem)
+      elItem.textContent = elInput.value
+      elItem.style.fontSize = "28px";
+      elItem.style.maxWidth = "90%";
+      elItem.style.backgroundColor = "white";
+      elItem.style.padding = "15px 15px";
+      elItem.style.margin = "28px";
+      elItem.style.borderRadius = "10px";
+      elItem.style.boxShadow = "0 0 15px 2px cyan";
+
+      elInput.value = ""
+    }
   }
+  addedNewItem()
 
   // function addedListItem(val){}
 })
